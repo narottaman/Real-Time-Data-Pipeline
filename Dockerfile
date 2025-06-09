@@ -24,7 +24,7 @@ RUN mkdir -p /cse511 && \
     cp /cse511/yellow_tripdata_2022-03.parquet /var/lib/neo4j/import/
 
 # Clone project repository from GitHub using a personal access token and set up the necessary scripts
-RUN git clone https://narottaman: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@github.com/SP-2025-CSE511-Data-Processing-at-Scale/Project-1-ngangada.git /tmp/repo && \
+RUN git clone git_repo /tmp/repo && \
     cp /tmp/repo/data_loader.py /cse511/ && \
     cp -r /tmp/repo/data_loader.py /var/lib/neo4j/import/ && \
     rm -rf /tmp/repo
